@@ -1,0 +1,328 @@
+html {font-size:100%;  font-family: Arial, Helvetica, sans-serif;}
+@media (max-width: 640px) {
+    body {font-size:1.3rem;}
+}
+
+@media (min-width: 641px) {
+    body {font-size:1.2rem;}
+}
+
+@media (min-width:960px) {
+    body {font-size:1.4rem;}
+}
+
+@media (min-width:1100px) {
+    body {font-size:1.6rem;}
+}
+*{
+    font-family:Garamond;
+}
+.full-page-img{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url(../Icone_ed_elementi_grafici/sfondo_con_alberi.png) no-repeat left top;
+    position: absolute;
+    z-index: -1;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+/********************************************************************************
+*********************************    MAIN MENU   *******************************
+********************************************************************************/
+
+/* Regole relative al posizionamento del main menu Desktop vs Mobile */
+.menu { position: fixed; top: 0;width: 100%;  background-color:#787B79;;}
+@media (max-width: 768px) {  .menu { top: auto; bottom: 0; background-color:#00CB75; position: fixed;}  }
+
+/* Regole relative ai link del MAIN MENU e relativi pseudoelementi::before */
+.menu div a{color: #00CB75; display:inline-block; font-size:1.8em;font-family: "Brush Script MT";  }
+.menu li a{ color: white; disolay:inline-block; }
+.menu li a:hover{ color: #FABE2C}
+
+
+.menu li a::before{
+    display:inline-flex;
+    width:1em;height: 1em;
+    vertical-align: middle;
+    font-size: 1.3em;
+    margin-top:-5px;
+    margin-right:5px;
+}
+
+
+.menu li:nth-of-type(1) a::before{
+     content: "";
+     background: transparent url(../Icone_ed_elementi_grafici/home_b.png)   no-repeat left top;
+     background-size: 100%;
+ }
+.menu li:nth-of-type(1) a:hover::before{
+    content: "";
+    background: transparent url(../Icone_ed_elementi_grafici/home_AR.png)   no-repeat left top;
+    background-size: 100%;
+}
+
+
+.menu li:nth-of-type(2) a::before{
+    content: "";
+    background: transparent url(../Icone_ed_elementi_grafici/learn_b.png)   no-repeat left top;
+    background-size: 100%; font-size: 1.8em;
+}
+.menu li:nth-of-type(2) a:hover::before{
+    content: "";
+    background: transparent url(../Icone_ed_elementi_grafici/learn_AR.png)   no-repeat left top;
+    background-size: 100%; font-size: 1.8em; font-weight: bold;
+}
+
+
+.menu li:nth-of-type(3) a::before{
+    content: "";
+    background: transparent url(../Icone_ed_elementi_grafici/list_text_b.png)   no-repeat left top;
+    background-size: 100%;
+}
+.menu li:nth-of-type(3) a:hover::before{
+    content: "";
+    background: transparent url(../Icone_ed_elementi_grafici/list_text_AR.png)   no-repeat left top;
+    background-size: 100%;
+}
+
+.menu li:nth-of-type(4) a::before{
+    content: "";
+    background: transparent url(../Icone_ed_elementi_grafici/alarm_b.png)   no-repeat left top;
+    background-size: 100%; font-size: 1.6em;
+}
+.menu li:nth-of-type(4) a:hover::before{
+    content: "";
+    background: transparent url(../Icone_ed_elementi_grafici/alarm_AR.png)   no-repeat left top;
+    background-size: 100%;
+}
+
+@media (max-width: 768px) {
+    /* Navigazione mobile - vedi relativo codice js riga 02-22  */
+    .navbar-nav{display:inline-block;} /* sovrascrittura stile  display:flex bootsrap*/
+    .menu a.navbar-brand {display:none;}
+    .menu ul {width:100%;}
+    .menu ul li {width:33.3333%;float: left;}
+    .menu ul li a{text-align:center;}
+    .menu li:nth-of-type(4){display: none;}
+}
+
+/*****************************************************************************************************
+*********************    SEGNALAZIONE           ******************************************************
+*****************************************************************************************************/
+/* Distribuzione contenuto pagina segnalazione*/
+._boxes {
+    position:relative;
+    text-align:center;
+    color:white;
+    font-weight: bolder;
+    top:7rem;
+}
+._segnala{font-size: 4rem;}
+._segnalaZonaRischio{background-color:#FF9500;border-radius:40px}
+._segnalaIncendio{background-color:#B05F55;  border-radius: 40px}
+._segnalaZonaRischio, ._segnalaIncendio{
+    padding:2rem 1rem 6rem;
+    line-height: normal;
+    opacity: 0.8;
+    font-size: 2rem;
+
+}
+._segnalaZonaRischio button, ._segnalaIncendio button{
+    margin-left:auto;
+    margin-right: auto;
+    text-align: center;
+    background-color:#97DE3D;
+    border-radius:15px;
+    color:#FF9500;
+    font-weight: bolder;
+    margin-top: 2rem;
+    width: 70%;
+}
+
+@media (max-width: 767px) {
+    ._segnalaZonaRischio{padding:1rem; margin-bottom:1rem;font-size: 1.3rem;}
+    ._segnalaIncendio{padding:1rem;  font-size: 1.3rem;}
+    ._segnala{font-size: 2rem;}
+    ._boxes{top:1rem; }
+    ._segnalaZonaRischio button, ._segnalaIncendio button{width: 95%; font-size: 1rem; margin-top: 1.5rem;}
+}
+@media only screen and (max-width : 320px) {
+    ._segnala{font-size: 1.5rem;}
+    ._segnalaZonaRischio button, ._segnalaIncendio button{ margin-top: 1rem;}
+}
+
+
+/*****************************************************************************************************
+*********************    PAGE DISCLAIMER         ******************************************************
+*****************************************************************************************************/
+
+/* FORMATTAZIONE DELLA STUTTURA - CONTINER GENERALE E VARIE SEZIONI */
+section{
+    position:relative;
+    width: 100%;
+    height:100vh;
+}
+
+
+/* POSIZIONAMENTO E SFONDO DI TUTTE LE MACRO SEZIONI NELLA PAGINA DISCLIMER.HTML ( DISCLAIMER, ADDRESS, USER, FEEDBACK)*/
+._disclaimer{
+    position:absolute;
+    width:50%;
+    height: 65%;
+    background-color: white;
+   
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); /* Yep! */
+
+}
+/*  FORMATTAZIONE BLOCCHI SESIONE DISCLAIMER */
+._content ._section:nth-child(1) div:nth-child(1) span{ color:#FF9500; margin-left: 10%;}
+._content ._section:nth-child(1) div:nth-child(2) p { text-align: justify; padding: 1rem;  color:#FF9500;}
+._content ._section:nth-child(1) div:nth-child(3)  {text-align: center;}
+._content ._section:nth-child(1) div:nth-child(3) button {text-align: center; width:70%; background-color:#00CB75}
+
+@media (max-width: 767px) {
+    ._disclaimer{ width:85%; height: 75%; font-size: 1rem;}
+    ._content ._section:nth-child(1) div:nth-child(1) span{ color:#FF9500; margin-left: 4%;}
+    #aaa{font-size: .8rem;}
+}
+@media (max-width: 320px) {
+    ._disclaimer{ width:90%; height: 75%; font-size: .7rem;}
+    ._content ._section:nth-child(1) div:nth-child(1) span{ font-size: .8rem; color:#FF9500; margin-left: 4%;}
+    #aaa{font-size: .8rem; margin-top: -50px;}
+}
+
+
+/***********************************************************************************************************
+***************  STILE DEL FORM       *********************************************************************
+************************************************************************************************************/
+
+#regForm {
+    background-color: #ffffff;
+    margin: 0px auto;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px;
+    width: 70%;
+    min-width: 300px;
+}
+h1{
+    color:#FF9500;
+    font-size: 1rem;
+    font-variant: proportional-width;
+    text-align: right;
+    font-weight: bolder;
+}
+/* button nella pagina home */
+.buttonLog{
+	background-color: #00CB75;
+  font: bold 20px Arial sans-serif;
+  text-align: center;
+  color: #ff8000;
+  top: 50%;
+  right:35%;
+  padding: 7px 20px;
+  width: 30%;
+  margin: 30;
+  border: none;
+  cursor: pointer;
+  -moz-border-radius: 20px;
+-webkit-border-radius: 20px;
+border-radius: 20px;
+}
+p{
+	color: black;
+}
+input {
+    padding: 10px;
+    width: 100%;
+    font-size: 17px;
+    font-family: Arial;
+    border: 1px solid #aaaaaa;
+}
+
+/* Contrassegno il box input che ha un errore di validazione */
+input.invalid {
+    background-color: #ffdddd;
+}
+
+/*Nascondiamo tutti gli step di default */
+.tab {
+    display: none;
+}
+
+/* Costruiamo i cerchi/widget che indicano la fase di avanzamento del processo: */
+.step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+}
+
+/* Distinguiamo il passo corrente/attivo */
+.step.active {
+    opacity: 1;
+}
+
+/*Distinguiamo i passi finiti e validi: */
+.step.finish {
+    background-color: #04AA6D;
+}
+
+/* upload file */
+
+._upload-image{
+    width: 100%;
+    background-color: #FF9500;
+    color:#97DE3D;
+    font-weight:bolder;
+    font-size:1.3rem;
+}
+._label{
+    display:block;
+    overflow-wrap:break-word;
+}
+
+/* pulsanti next and prev*/
+
+#nextBtn,#prevBtn{
+    background-color: #97DE3D;
+    color: #FF9500;
+    font-weight: bolder;border: none !important;
+    border-color: white;
+}
+#prevBtn{
+    position:absolute;
+    width: 48px;
+    height:48px;
+    color:#97DE3D;
+    left: 5%; top:5%;
+    background-color: transparent;
+    border-color: white;
+    font-weight: bolder;
+    border-radius: 100%;
+
+
+}
+
+
+#marianna {/* Guarda le proporzioni tra dimensioni e margini fa che restino le stesse;
+              top e left invece muovono orizontalmente e verticalmente il tuo div*/
+     width: 350px;
+     height: 300px;
+     position: absolute;
+     top: 27%;
+     left: 50%;
+     margin: -150px 0 0 -175px;
+ }

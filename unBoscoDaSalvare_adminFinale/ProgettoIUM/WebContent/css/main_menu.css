@@ -1,0 +1,144 @@
+.full-page-img{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url(../Icone_ed_elementi_grafici/admin.jpg) no-repeat center top;
+    position: fixed;
+    z-index: -1;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+/********************************************************************************
+*********************************    MAIN MENU   *******************************
+********************************************************************************/
+/* Pulsante Accedi */
+.button {
+  background-color: #ff0000;
+  font: bold 20px Arial sans-serif;
+  text-align: center;
+  color: white;
+  position: absolute;
+  top: 80%;
+  right:30%;
+  padding: 7px 20px;
+  width: 30%;
+  margin: 30;
+  border: none;
+  cursor: pointer;
+  -moz-border-radius: 20px;
+-webkit-border-radius: 20px;
+border-radius: 20px;
+}
+
+/* Regole relative al posizionamento del main menu Desktop vs Mobile */
+.menu { position: fixed; top: 0;width: 100%;  background-color:#ff0000;;}
+@media (max-width: 768px) {  .menu { top: auto; bottom: 0; background-color:#ff0000; position: fixed;}  }
+
+/* Regole relative ai link del MAIN MENU e relativi pseudoelementi::before */
+.menu div a{color: #00CB75; display:inline-block; font-size:1.8em;font-family: "Brush Script MT";  }
+.menu li a{ color: white; disolay:inline-block; }
+.menu li a:hover{ color: #FABE2C}
+
+
+.menu li a::before{
+    display:inline-flex;
+    width:1em;height: 1em;
+    vertical-align: middle;
+    font-size: 1.3em;
+    margin-top:-5px;
+    margin-right:5px;
+}
+
+
+.menu li:nth-of-type(1) a::before{
+     content: "";
+     background: transparent url(../Icone_ed_elementi_grafici/home_b.png)   no-repeat left top;
+     background-size: 100%;
+ }
+.menu li:nth-of-type(1) a:hover::before{
+    content: "";
+    background: transparent url(../Icone_ed_elementi_grafici/home_AR.png)   no-repeat left top;
+    background-size: 100%;
+}
+
+
+
+nav{clear:both}
+@media (max-width: 768px) {
+    /* Navigazione mobile - vedi relativo codice js riga 02-22  */
+    .navbar-nav{display:inline-block;} /* sovrascrittura stile  display:flex bootsrap*/
+    .menu a.navbar-brand {display:none;}
+    .menu ul {width:100%;}
+    .menu ul li {width:33.3333%;float: center;}
+    .menu li:nth-of-type(4){display: none;}
+}
+h1{
+	color: red;
+	text-align: center;
+	margin-top: 30px;
+	
+}
+form{
+	text-align: center;
+
+}
+.btn{
+	background-color: #ff0000;
+	color: white;
+}
+.box-protocol{
+	text-align: center;
+}
+
+label{
+	color: red;
+}
+/* button nella pagine di login */
+.buttonLog{
+	background-color: #ff0000;
+  font: bold 20px Arial sans-serif;
+  text-align: center;
+  color: white;
+  position: absolute;
+  top: 50%;
+  right:35%;
+  padding: 7px 20px;
+  width: 30%;
+  margin: 30;
+  border: none;
+  cursor: pointer;
+  -moz-border-radius: 20px;
+-webkit-border-radius: 20px;
+border-radius: 20px;
+}
+/* posizione del logo dei vigili del fuoco sull index*/
+.stemma{
+  position: absolute;
+  top: 10px;
+  right: 5px; 
+}
+.exit{
+	margin-top: 0px;
+	position: absolute;
+  top: 10px;
+  left: 5px; 
+}
+.w3-container{
+	
+	width: 500px;
+}
+.w3-container .p{
+	color: white;
+	font: bold 80px Arial sans-serif;
+	text-align: center;
+}
+/* p riferito a un bosco da salvare admin page*/
+p{
+ color: white;
+ font-weight: bold;
+ text-align: left;
+ margin-top: 30px;
+}
